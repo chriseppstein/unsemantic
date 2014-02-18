@@ -1,96 +1,99 @@
 @import "unsemantic-vars"
 
-// `Hide on desktop.
-//----------------------------------------------------------------------------------------------------
+=unsemantic-mobile-grid-system
+  +unsemantic-grid-system
 
-.hide-on-desktop
-  @extend %hide
+  // `Hide on desktop.
+  //----------------------------------------------------------------------------------------------------
 
-// `Grid columns.
-//----------------------------------------------------------------------------------------------------
+  .hide-on-desktop
+    @extend %hide
 
-//
-// Full width, just line-break.
-//
+  // `Grid columns.
+  //----------------------------------------------------------------------------------------------------
 
-.grid-100
-  @extend %grid-100
+  //
+  // Full width, just line-break.
+  //
 
-//
-// For 5 through 95 percent.
-//
+  .grid-100
+    @extend %grid-100
 
-@for $i from 1 through 19
-  $num: $i * 5
+  //
+  // For 5 through 95 percent.
+  //
 
-  // Percentage based widths.
-  .grid-#{$num}
-    @extend %grid-#{$num}
+  @for $i from 1 through 19
+    $num: $i * 5
 
-  // Prefix, to add extra columns before.
-  .prefix-#{$num}
-    @extend %prefix-#{$num}
+    // Percentage based widths.
+    .grid-#{$num}
+      @extend %grid-#{$num}
 
-  // Suffix, to add extra columns after.
-  .suffix-#{$num}
-    @extend %suffix-#{$num}
+    // Prefix, to add extra columns before.
+    .prefix-#{$num}
+      @extend %prefix-#{$num}
 
-  // Push, to rearrange column order (for potential "SEO").
-  .push-#{$num}
-    @extend %push-#{$num}
+    // Suffix, to add extra columns after.
+    .suffix-#{$num}
+      @extend %suffix-#{$num}
 
-  // Pull, to rearrange column order (for potential "SEO").
-  .pull-#{$num}
-    @extend %pull-#{$num}
+    // Push, to rearrange column order (for potential "SEO").
+    .push-#{$num}
+      @extend %push-#{$num}
 
-//
-// For one-third and two-thirds.
-//
+    // Pull, to rearrange column order (for potential "SEO").
+    .pull-#{$num}
+      @extend %pull-#{$num}
 
-@for $i from 1 through 2
-  $num: $i * 33
+  //
+  // For one-third and two-thirds.
+  //
 
-  // Percentage based widths.
-  .grid-#{$num}
-    @extend %grid-#{$num}
+  @for $i from 1 through 2
+    $num: $i * 33
 
-  // Prefix, to add extra columns before.
-  .prefix-#{$num}
-    @extend %prefix-#{$num}
+    // Percentage based widths.
+    .grid-#{$num}
+      @extend %grid-#{$num}
 
-  // Suffix, to add extra columns after.
-  .suffix-#{$num}
-    @extend %suffix-#{$num}
+    // Prefix, to add extra columns before.
+    .prefix-#{$num}
+      @extend %prefix-#{$num}
 
-  // Push, to rearrange column order (for potential "SEO").
-  .push-#{$num}
-    @extend %push-#{$num}
+    // Suffix, to add extra columns after.
+    .suffix-#{$num}
+      @extend %suffix-#{$num}
 
-  // Pull, to rearrange column order (for potential "SEO").
-  .pull-#{$num}
-    @extend %pull-#{$num}
+    // Push, to rearrange column order (for potential "SEO").
+    .push-#{$num}
+      @extend %push-#{$num}
 
-// `Push & Pull, to rearrange column order (for potential "SEO").
-//----------------------------------------------------------------------------------------------------
+    // Pull, to rearrange column order (for potential "SEO").
+    .pull-#{$num}
+      @extend %pull-#{$num}
 
-//
-// For 5 through 95 percent.
-//
+  // `Push & Pull, to rearrange column order (for potential "SEO").
+  //----------------------------------------------------------------------------------------------------
 
-@for $i from 1 through 19
-  $num: $i * 5
+  //
+  // For 5 through 95 percent.
+  //
 
-  .push-#{$num},
-  .pull-#{$num}
-    @extend %grid-columns-push-pull
+  @for $i from 1 through 19
+    $num: $i * 5
 
-//
-// For one-third and two-thirds.
-//
+    .push-#{$num},
+    .pull-#{$num}
+      @extend %grid-columns-push-pull
 
-@for $i from 1 through 2
-  $num: $i * 33
+  //
+  // For one-third and two-thirds.
+  //
 
-  .push-#{$num},
-  .pull-#{$num}
-    @extend %grid-columns-push-pull
+  @for $i from 1 through 2
+    $num: $i * 33
+
+    .push-#{$num},
+    .pull-#{$num}
+      @extend %grid-columns-push-pull

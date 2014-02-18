@@ -7,11 +7,12 @@ $media-desktop-min: 768px !default
 
 @import "unsemantic-ie-snap"
 
-@media all
-  @import "unsemantic-grid-base"
+@import "unsemantic-grid-base"
+@import "unsemantic-grid-mobile"
+@import "unsemantic-grid-desktop"
 
-@media screen and (max-width: $media-mobile-max)
-  @import "unsemantic-grid-mobile"
++define-media(mobile, "(max-width: #{$media-mobile-max})")
+  +unsemantic-mobile-grid-system
 
-@media screen and (min-width: $media-desktop-min)
-  @import "unsemantic-grid-desktop"
++define-media(desktop, "(min-width: #{$media-desktop-min})")
+  +unsemantic-desktop-grid-system
